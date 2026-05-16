@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arlene Angel Jala - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">A n g e l</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#contact" class="nav-cta">Let’s Talk</a>
+                <div class="theme-toggle">
+                    <input type="checkbox" id="theme-switch">
+                    <label for="theme-switch" class="toggle-label">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Hi!, I'm Arlene Angel Jala</h1>
+                <p class="subtitle">Computer Science Student | Future Web Developer</p>
+                <p class="description">
+                    I love building beautiful websites and solving problems with code. Currently learning web development and excited to share my projects with you!
+                </p>
+                <div class="typing-effect">
+                    <span id="typed-text"></span>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn primary">View My Work</a>
+                    <a href="file:///C:/Users/User/Downloads/my%20resume%20ojt.pdf" class="btn secondary" download>My Resume</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-stack">
+                    <div class="hero-image-back"></div>
+                    <div class="hero-image-front">
+                        <img src="file:///C:/Users/User/OneDrive/Desktop/MyPortfolio1/girl.jpg" alt="Arlene Angel Jala - Girl Developer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="particles" id="particles"></div>
+        <div class="scroll-down">
+            <a href="#about" aria-label="Scroll to About"></a>
+        </div>
+    </section>
+    <section id="about" class="about">
+        <div class="container about-grid">
+            <div class="about-image">
+                <div class="about-image-frame">
+                    <img src="file:///C:/Users/User/OneDrive/Pictures/f1a31a2eb2ec7c1844818c16702415bb.jpg" alt="Arlene Angel Jala">
+                </div>
+            </div>
+            <div class="about-copy">
+                <span class="about-tag">ABOUT ME</span>
+                <h2>About Me</h2>
+                <p>I’m a Computer Science student who didn’t originally see myself as a “computer person,” but along the way I discovered how fun and rewarding technology can be. What started as curiosity turned into a passion for creating clean interfaces, building interactive experiences, and solving problems through code.</p>
+                <p>I enjoy designing modern, responsive websites and turning ideas into functional digital projects that look polished and feel intuitive. Constantly learning and experimenting with new tools, I focus on improving both my technical skills and creativity while building projects that are practical, engaging, and meaningful.</p>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <h3>6</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>5+</h3>
+                        <p>Technologies Mastered</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>100%</h3>
+                        <p>Passion & Dedication</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>24/7</h3>
+                        <p>Always Learning</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <p class="subtitle">Languages, frameworks, and tools I work with</p>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-head">
+                        <div class="icon"><i class="fas fa-code"></i></div>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-pill">JavaScript</span>
+                        <span class="skill-pill">TypeScript</span>
+                        <span class="skill-pill">Python</span>
+                        <span class="skill-pill">Java</span>
+                        <span class="skill-pill">C</span>
+                        <span class="skill-pill">SQL</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-head">
+                        <div class="icon"><i class="fas fa-layer-group"></i></div>
+                        <h3>Frontend</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-pill">React</span>
+                        <span class="skill-pill">Vue.js</span>
+                        <span class="skill-pill">HTML/CSS</span>
+                        <span class="skill-pill">Redux</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-head">
+                        <div class="icon"><i class="fas fa-server"></i></div>
+                        <h3>Backend &amp; Database</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-pill">MySql</span>
+                        <span class="skill-pill">Supabase</span>
+                    </div>
+                </div>
+
+                <div class="tools-card">
+                    <div class="skill-head" style="flex:0 0 100%;display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem">
+                        <div class="icon"><i class="fas fa-tools"></i></div>
+                        <h3>Tools &amp; Platforms</h3>
+                    </div>
+                    <div class="skill-tags" style="flex:1">
+                        <span class="skill-pill">Git</span>
+                        <span class="skill-pill">GitHub</span>
+                        <span class="skill-pill">VS Code</span>
+                        <span class="skill-pill">Figma</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="featured-header">
+                <span class="featured-tag">FEATURED WORK</span>
+                <h2 class="featured-title">Recent Projects</h2>
+                <div class="featured-underline" aria-hidden="true"></div>
+                <p class="featured-subtitle">Building beautiful and functional web experiences</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-card-media" style="background-image: url('ocean.png'); background-size: cover; background-position: center;">
+                        <div class="project-card-label">FULL STACK WEB</div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3>Inn Management System</h3>
+                        <p class="project-description">Comprehensive full‑stack Python app for inn operations — reservations, guest profiles, and a REST API backend.</p>
+                        <p class="project-role"><strong>Role:</strong> Full-Stack Developer</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">Database</span>
+                            <span class="project-tag">REST API</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/avqel/inn-management-system" class="btn secondary" target="_blank">GitHub</a>
+                            <a href="#" class="btn small">Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card-media" style="background-image: url('LoveList.png'); background-size: cover; background-position: center;">
+                        <div class="project-card-label">WEB APPLICATION</div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3>LoveList</h3>
+                        <p class="project-description">A comprehensive full-stack web application designed for storing, organizing, and cherishing your most meaningful memories, moments, photos, and personal experiences all in one place.</p>
+                        <p class="project-role"><strong>Role:</strong> Full-Stack Developer</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/avqel/LOVEList.git" class="btn secondary" target="_blank">GitHub</a>
+                            <a href="#" class="btn small">Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card-media" style="background-image: url('calculator.png'); background-size: cover; background-position: center;">
+                        <div class="project-card-label">RESPONSIVE DESIGN</div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3>Calculator</h3>
+                        <p class="project-description">A responsive calculator application with a clean, modern interface and smooth user experience.</p>
+                        <p class="project-role"><strong>Role:</strong> Front-End Developer</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">Responsive</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/avqel/Calculator.git" class="btn secondary">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card-media" style="background-image: url('MoonFlare.png'); background-size: cover; background-position: center;">
+                        <div class="project-card-label">GAME</div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3>Moonlight Forest</h3>
+                        <p class="project-description">Moonlight Forest is a 2D cooperative puzzle-platformer built with Godot 4.5. Inspired by the classic "teamwork" mechanics of Fireboy and Watergirl, the game follows the journey of a boy and a girl lost in a mysterious, sprawling forest.</p>
+                        <p class="project-role"><strong>Role:</strong> Front-End Developer</p>
+                        <div class="project-tags">
+                            <span class="project-tag">GDScript</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">UX</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/avqel/MoonFlare" class="btn secondary">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card-media" style="background-image: url('payroll.png'); background-size: cover; background-position: center;">
+                        <div class="project-card-label">PRODUCTIVITY APP</div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3>Payroll</h3>  
+                        <p class="project-description">A payroll management application with employee data handling, salary calculations, and report generation.</p>
+                         <p class="project-role"><strong>Role:</strong> UI/UX Developer</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Vue.js</span>
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">LocalStorage</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/avqel/Payroll" class="btn secondary">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card-media" style="background-image: url('website.png'); background-size: cover; background-position: center;">
+                        <div class="project-card-label">E-COMMERCE</div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3>All Day Travellers Inn System</h3>
+                        <p class="project-description">A Reservation System for the All Day Travellers Inn Business. This is deployed online and it is a done by our team, and it has a responsive design.</p>
+                        <p class="project-role"><strong>Role:</strong> Front-End Developer</p>
+                        <div class="project-tags">
+                            <span class="project-tag">React</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">Animations</span>
+                            <span class="project-tag">Accessibility</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://all-day-travellers-inn.vercel.app/?fbclid=IwY2xjawR00xRleHRuA2FlbQIxMABicmlkETFDZEJjRlRWUTZlYU9rMkY5c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHmXWhsaJJQQcSQR7iHcWgojp0xAx-3dxQrlEIMww_SqY0UDyaXDfcntp2XqL_aem_sx7ef2hnmkRtSMylm8msmQ" class="btn primary">Live Demo</a>
+                             </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2>Experience</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="experience-icon"><i class="fas fa-briefcase"></i></div>
+                    <h3>All Day Traveller's Inn Website</h3>
+                    <p>Built UI components, refined responsive layouts, and collaborated with a small team to deliver client-facing pages.</p>
+                    <span>2024</span>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Campus Developer</h3>
+                    <p>Designed and developed student project resources while improving frontend interaction and accessibility.</p>
+                    <span>2023</span>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h3>Project Lead</h3>
+                    <p>Led a collaborative prototype project, coordinating tasks and ensuring polished delivery under deadline.</p>
+                    <span>2022</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="education" class="education">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-logo">
+                        <img src="file:///C:/Users/User/Downloads/1c3e66c6-6457-4a39-9fc9-025b5e20f112-removebg-preview%20(1).png" alt="Elementary School Logo">
+                    </div>
+                    <h3>Moonwalk Elementary School</h3>
+                    <p>Elementary School</p>
+                    <span class="education-years">2013 - 2019</span>
+                </div>
+                <div class="education-card">
+                    <div class="education-logo">
+                        <img src="file:///C:/Users/User/Downloads/c85b1f51-3c35-46b6-853f-461ec32765b0-removebg-preview.png" alt="High School Logo">
+                    </div>
+                    <h3> Oy National Highschool</h3>
+                    <p>Senior High School</p>
+                    <span class="education-years">2019 - 2023</span>
+                </div>
+                <div class="education-card">
+                    <div class="education-logo">
+                        <img src="file:///C:/Users/User/Downloads/de6c0be4-f6bb-4879-90d3-f7dc52437061-removebg-preview.png" alt="College Logo">
+                    </div>
+                    <h3>University of Bohol</h3>
+                    <p>Bachelor of Science in Computer Science</p>
+                    <span class="education-years">2020 - 2024</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <div class="container contact-container">
+            <div class="contact-left">
+                <span class="section-label">Let’s Talk</span>
+                <h2>Let’s Connect</h2>
+                <p class="contact-intro">I'd love to hear from you. Send me a message, whether it's about a project, collaboration, or just to say hello.</p>
+                <div class="contact-box">
+                    <h3>Let’s Work Together</h3>
+                    <p>Whether you have a question about my work, want to collaborate on a project, or just want to chat about web development, feel free to reach out. I'm always excited to hear new ideas!</p>
+                    <div class="social-links">
+                        <a href="https://github.com/topics/system" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/arlenejala" class="social-icon" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/arleneangel.jala/" class="social-icon" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/avqel_/" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-right">
+                <div class="contact-card">
+                    <h3>Send a Message</h3>
+                    <form class="contact-form">
+                        <label>Your Name</label>
+                        <input type="text" placeholder="" required>
+                        <label>Your Email</label>
+                        <input type="email" placeholder="" required>
+                        <label>Message</label>
+                        <textarea placeholder="Tell me about your project..." required></textarea>
+                        <button type="submit" class="btn primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>&copy; 2023 Arlene Angel Jala. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
