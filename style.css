@@ -948,6 +948,7 @@ h2 {
     text-align: center;
     box-shadow: var(--shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
 
 .education-card:hover {
@@ -965,12 +966,14 @@ h2 {
     align-items: center;
     justify-content: center;
     border: 1px solid rgba(255, 20, 147, 0.2);
+    overflow: hidden; 
 }
 
-.education-logo img {
-    width: 64px;
-    height: 64px;
-    
+.school-logo-img {
+    width: 60%;          
+    height: 60%;
+    object-fit: contain; 
+    border-radius: 50%;
 }
 
 .education-logo i {
