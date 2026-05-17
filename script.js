@@ -14,9 +14,13 @@ themeSwitch.addEventListener('change', () => {
 
 // Load saved theme
 const savedTheme = localStorage.getItem('theme');
-if (savedTheme === 'dark') {
+if (savedTheme === 'light') {
+    body.removeAttribute('data-theme');
+    themeSwitch.checked = false;
+} else {
     body.setAttribute('data-theme', 'dark');
     themeSwitch.checked = true;
+    localStorage.setItem('theme', 'dark');
 }
 
 // Typing Effect
@@ -60,6 +64,17 @@ typeWriter();
 
 // Particles
 const particlesContainer = document.getElementById('particles');
+const heroImageCircle = document.querySelector('.hero-image-stack');
+
+function isInsideHeroCircle(x, y, radius) {
+    if (!heroImageCircle) return false;
+    const containerRect = particlesContainer.getBoundingClientRect();
+    const circleRect = heroImageCircle.getBoundingClientRect();
+    const circleCenterX = circleRect.left - containerRect.left + circleRect.width / 2;
+    const circleCenterY = circleRect.top - containerRect.top + circleRect.height / 2;
+    const distance = Math.hypot(x - circleCenterX, y - circleCenterY);
+    return distance < (circleRect.width / 2 + radius + 6);
+}
 
 function createParticle() {
     const particle = document.createElement('div');
@@ -68,9 +83,19 @@ function createParticle() {
     const size = Math.random() * 10 + 5;
     particle.style.width = `${size}px`;
     particle.style.height = `${size}px`;
-    
-    particle.style.left = `${Math.random() * 100}%`;
-    particle.style.top = `${Math.random() * 100}%`;
+
+    const containerRect = particlesContainer.getBoundingClientRect();
+    let leftPx, topPx;
+    let attempts = 0;
+
+    do {
+        leftPx = Math.random() * (containerRect.width - size);
+        topPx = Math.random() * (containerRect.height - size);
+        attempts += 1;
+    } while (isInsideHeroCircle(leftPx + size / 2, topPx + size / 2, size / 2) && attempts < 30);
+
+    particle.style.left = `${(leftPx / containerRect.width) * 100}%`;
+    particle.style.top = `${(topPx / containerRect.height) * 100}%`;
     
     particle.style.animationDuration = `${Math.random() * 4 + 4}s`;
     particle.style.animationDelay = `${Math.random() * 2}s`;
