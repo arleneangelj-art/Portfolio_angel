@@ -64,6 +64,19 @@
             <a href="#about" aria-label="Scroll to About"></a>
         </div>
     </section>
+    <!-- Media modal for project details -->
+    <div id="media-modal" class="media-modal" aria-hidden="true">
+        <div class="media-modal__overlay" data-close></div>
+        <div class="media-modal__content">
+            <button class="media-modal__close" aria-label="Close">×</button>
+            <div class="media-modal__viewer">
+                <button class="media-prev" aria-label="Previous">‹</button>
+                <div class="media-slot"></div>
+                <button class="media-next" aria-label="Next">›</button>
+            </div>
+            <div class="media-modal__caption"></div>
+        </div>
+    </div>
     <section id="about" class="about">
         <div class="container about-grid">
             <div class="about-image">
@@ -78,20 +91,20 @@
                 <p>I enjoy designing modern, responsive websites and turning ideas into functional digital projects that look polished and feel intuitive. Constantly learning and experimenting with new tools, I focus on improving both my technical skills and creativity while building projects that are practical, engaging, and meaningful.</p>
                 <div class="about-stats">
                     <div class="stat-card">
-                        <h3>6</h3>
-                        <p>Projects Completed</p>
+                        <p>Name:</p>
+                        <h3>Arlene Angel Jala</h3>
                     </div>
                     <div class="stat-card">
-                        <h3>5+</h3>
-                        <p>Technologies Mastered</p>
+                        <p>School:</p>
+                        <h3>University of Bohol</h3>
                     </div>
                     <div class="stat-card">
-                        <h3>100%</h3>
-                        <p>Passion & Dedication</p>
+                        <p>Program:</p>
+                        <h3>Bachelor of Science in Computer Science<h3>
                     </div>
                     <div class="stat-card">
-                        <h3>24/7</h3>
-                        <p>Always Learning</p>
+                        <p>Year:</p>
+                        <h3>3rd Year</h3>
                     </div>
                 </div>
             </div>
@@ -194,7 +207,7 @@
                         </div>
                         <div class="project-actions">
                             <a href="https://github.com/avqel/inn-management-system" class="btn secondary" target="_blank">GitHub</a>
-                            <a href="#" class="btn small">Details</a>
+                            <a href="#" class="btn small details-btn" data-media='["ocean.png", "home.png", "checkIn.png", "directory.png", "room.png", "reservation.png", "history.png", "reports.png", "tracker.png", "settings.png", "online1.png", "online.png"]'>Details</a>
                         </div>
                     </div>
                 </div>
@@ -250,7 +263,7 @@
                         </div>
                         <div class="project-actions">
                             <a href="https://github.com/avqel/MoonFlare" class="btn secondary">GitHub</a>
-                            <a href="#" class="btn small">Details</a>
+                            <a href="#" class="btn small details-btn" data-media='["moonlight.mp4"]'>Details</a>
                         </div>
                     </div>
                 </div>
@@ -269,7 +282,7 @@
                         </div>
                         <div class="project-actions">
                             <a href="https://github.com/avqel/Payroll" class="btn secondary">GitHub</a>
-                            <a href="#" class="btn small">Details</a>
+                             <a href="file:///C:/MyPortfolio1/UI%20payroll/index.html" class="btn primary">Live Demo</a>
                         </div>
                     </div>
                 </div>
@@ -288,7 +301,7 @@
                         </div>
                         <div class="project-actions">
                             <a href="https://all-day-travellers-inn.vercel.app/?fbclid=IwY2xjawR00xRleHRuA2FlbQIxMABicmlkETFDZEJjRlRWUTZlYU9rMkY5c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHmXWhsaJJQQcSQR7iHcWgojp0xAx-3dxQrlEIMww_SqY0UDyaXDfcntp2XqL_aem_sx7ef2hnmkRtSMylm8msmQ" class="btn primary">Live Demo</a>
-                             </div>
+                        </div>
                     </div>
                 </div>
                 
@@ -301,22 +314,19 @@
             <div class="experience-grid">
                 <div class="experience-card">
                     <div class="experience-icon"><i class="fas fa-briefcase"></i></div>
-                    <h3>All Day Traveller's Inn Website</h3>
-                    <p>Built UI components, refined responsive layouts, and collaborated with a small team to deliver client-facing pages.</p>
-                    <span>2024</span>
+                    <h1>Bookeeper</h1>
+                    <h3>All Day Travellers Inn | All-Day Minimart</h3>
+                    <p>Managed store and Inn Financial records, monitored monthly expenses, and organized documents for financial report.</p>
+                    <span>2025-Present</span>
                 </div>
                 <div class="experience-card">
-                    <div class="experience-icon"><i class="fas fa-laptop-code"></i></div>
-                    <h3>Campus Developer</h3>
-                    <p>Designed and developed student project resources while improving frontend interaction and accessibility.</p>
-                    <span>2023</span>
+                    <div class="experience-icon"><i class="fas fa-briefcase"></i></div>
+                    <h1>Video Editor</h1>
+                    <h3>Freelancer</h3>
+                    <p>Creates and edits engaging videos by combining clips, audio, effects, and transitions. I focus on producing clear, creative, and high-quality content suitable for social media, school projects, and other digital platforms.</p>
+                    <span>2023-2025</span>
                 </div>
-                <div class="experience-card">
-                    <div class="experience-icon"><i class="fas fa-lightbulb"></i></div>
-                    <h3>Project Lead</h3>
-                    <p>Led a collaborative prototype project, coordinating tasks and ensuring polished delivery under deadline.</p>
-                    <span>2022</span>
-                </div>
+              
             </div>
         </div>
     </section>

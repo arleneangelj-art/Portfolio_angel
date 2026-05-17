@@ -76,36 +76,111 @@ function isInsideHeroCircle(x, y, radius) {
     return distance < (circleRect.width / 2 + radius + 6);
 }
 
-function createParticle() {
-    const particle = document.createElement('div');
-    particle.className = 'particle';
-    
-    const size = Math.random() * 10 + 5;
-    particle.style.width = `${size}px`;
-    particle.style.height = `${size}px`;
+    function createParticle() {
+        const p = document.createElement('div');
+        p.className = 'particle';
+        const size = Math.random() * 8 + 4;
+        p.style.width = p.style.height = size + 'px';
 
-    const containerRect = particlesContainer.getBoundingClientRect();
-    let leftPx, topPx;
-    let attempts = 0;
+        // avoid placing particles inside hero circle
+        const hero = document.querySelector('.hero-image-stack');
+        let attempt = 0;
+        let x, y;
+        do {
+            x = Math.random() * window.innerWidth;
+            y = Math.random() * window.innerHeight;
+            attempt++;
+        } while (hero && isInsideHeroCircle(x, y, hero) && attempt < 30);
 
-    do {
-        leftPx = Math.random() * (containerRect.width - size);
-        topPx = Math.random() * (containerRect.height - size);
-        attempts += 1;
-    } while (isInsideHeroCircle(leftPx + size / 2, topPx + size / 2, size / 2) && attempts < 30);
-
-    particle.style.left = `${(leftPx / containerRect.width) * 100}%`;
-    particle.style.top = `${(topPx / containerRect.height) * 100}%`;
-    
-    particle.style.animationDuration = `${Math.random() * 4 + 4}s`;
-    particle.style.animationDelay = `${Math.random() * 2}s`;
-    
-    particlesContainer.appendChild(particle);
-    
-    setTimeout(() => {
-        particle.remove();
-    }, 6000);
+        p.style.left = x + 'px';
+        p.style.top = y + 'px';
+        particlesContainer.appendChild(p);
+        setTimeout(() => p.remove(), 7000);
 }
+
+    // media modal (project details)
+    const mediaModal = document.getElementById('media-modal');
+    const mediaSlot = document.querySelector('.media-slot');
+    const mediaCaption = document.querySelector('.media-modal__caption');
+    const prevBtn = document.querySelector('.media-prev');
+    const nextBtn = document.querySelector('.media-next');
+    const closeBtn = document.querySelector('.media-modal__close');
+    const modalOverlay = document.querySelector('.media-modal__overlay');
+    let currentMedia = [];
+    let currentIndex = 0;
+
+    function openMediaModal(list, startIndex = 0) {
+        currentMedia = list.slice();
+        currentIndex = startIndex || 0;
+        renderMedia(currentIndex);
+        mediaModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeMediaModal() {
+        mediaModal.setAttribute('aria-hidden', 'true');
+        mediaSlot.innerHTML = '';
+        mediaCaption.textContent = '';
+        document.body.style.overflow = '';
+    }
+
+    function renderMedia(i) {
+        mediaSlot.innerHTML = '';
+        if (!currentMedia || currentMedia.length === 0) return;
+        const src = currentMedia[i];
+        const lower = src.toLowerCase();
+        let el;
+        if (lower.endsWith('.mp4') || lower.endsWith('.webm') || lower.endsWith('.ogg')) {
+            el = document.createElement('video');
+            el.src = src;
+            el.controls = true;
+            el.autoplay = true;
+        } else {
+            el = document.createElement('img');
+            el.src = src;
+            el.alt = '';
+        }
+        mediaSlot.appendChild(el);
+        mediaCaption.textContent = `${i + 1} of ${currentMedia.length}`;
+    }
+
+    function prevMedia() {
+        if (!currentMedia.length) return;
+        currentIndex = (currentIndex - 1 + currentMedia.length) % currentMedia.length;
+        renderMedia(currentIndex);
+    }
+
+    function nextMedia() {
+        if (!currentMedia.length) return;
+        currentIndex = (currentIndex + 1) % currentMedia.length;
+        renderMedia(currentIndex);
+    }
+
+    prevBtn.addEventListener('click', prevMedia);
+    nextBtn.addEventListener('click', nextMedia);
+    closeBtn.addEventListener('click', closeMediaModal);
+    modalOverlay.addEventListener('click', closeMediaModal);
+    document.addEventListener('keydown', (e) => {
+        if (mediaModal.getAttribute('aria-hidden') === 'false') {
+            if (e.key === 'Escape') closeMediaModal();
+            if (e.key === 'ArrowLeft') prevMedia();
+            if (e.key === 'ArrowRight') nextMedia();
+        }
+    });
+
+    // wire up details buttons
+    document.querySelectorAll('.details-btn').forEach(btn => {
+        btn.addEventListener('click', function (ev) {
+            ev.preventDefault();
+            let data = this.getAttribute('data-media') || '[]';
+            try {
+                const list = JSON.parse(data);
+                if (Array.isArray(list) && list.length) openMediaModal(list, 0);
+            } catch (err) {
+                console.error('Invalid media list', err);
+            }
+        });
+    });
 
 setInterval(createParticle, 300);
 
