@@ -999,6 +999,87 @@ h2 {
     color: var(--secondary-color);
 }
 
+/* Seminars */
+.seminars-timeline {
+    display: grid;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.timeline-year {
+    position: relative;
+    padding-left: 2.25rem;
+    border-left: 3px solid rgba(255, 20, 147, 0.18);
+}
+
+.timeline-year::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 0.6rem;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--bg-color);
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 0 0 6px rgba(255, 20, 147, 0.08);
+}
+
+.year-label {
+    margin: 0 0 1rem;
+    font-size: 1.45rem;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.seminar-items {
+    display: grid;
+    gap: 1rem;
+}
+
+.seminar-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 1.35rem 1.4rem;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.seminar-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 34px rgba(255, 20, 147, 0.14);
+}
+
+.seminar-title {
+    margin: 0 0 0.35rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.seminar-detail {
+    margin: 0;
+    color: var(--text-color);
+    opacity: 0.8;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .timeline-year {
+        padding-left: 1.5rem;
+    }
+
+    .timeline-year::before {
+        left: -8px;
+    }
+}
+
+
 .education-card h3 {
     margin-bottom: 0.75rem;
     color: var(--primary-color);
