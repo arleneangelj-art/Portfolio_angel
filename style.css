@@ -1205,10 +1205,19 @@ h2 {
 }
 
 .contact-form input:focus,
-.contact-form textarea:focus {
+.contact-form textarea:focus,
+.contact-form input:valid,
+.contact-form textarea:valid {
     outline: none;
     border-color: var(--primary-color);
     box-shadow: 0 0 20px rgba(255, 20, 147, 0.25);
+    background: #ffffff;
+    color: #111111;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(17, 17, 17, 0.45);
 }
 
 .social-links {
